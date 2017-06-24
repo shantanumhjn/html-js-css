@@ -4,23 +4,54 @@
     <meta charset="utf-8">
     <title>Anatomy of a CSS Rule</title>
     <style>
-      p {
-        color: blue;
-        font-size: 20px;
-        width: 200px;
-      }
-      h1 {
-        color: green;
-        font-size: 36px;
-        text-align: center;
-      }
+    /*
+      selectors can be on
+      1) elements eg. p {}
+      2) class eg. .error{}
+      3) id eg. #someid {}
+
+      group selectors together using ,
+    */
+    /* all h2 elements */
+    h2 {
+      color: red;
+      text-align: center;
+    }
+
+    /* all with class="highlight"*/
+    .highlight {
+      font-size: 20px;
+      font-weight: bold;
+      font-style: italic;
+      background-color: green;
+      opacity: .6;
+    }
+
+    /* element with id="mainPoint" */
+    #mainPoint {
+      font-size: 24px;
+      font-weight: bold;
+      background-color: red;
+      opacity: .7;
+    }
+
+    /* all p and h1 elements */
+    p, h1 {
+      color: blue;
+      text-align: center;
+    }
     </style>
   </head>
   <body>
     <h1>Anatomy of a CSS Rule</h1>
     <h2>Subheading 1</h2>
     <p>CSS works by associating rules with HTML elements. These rules govern how the content of specified elements should be displayed. A CSS rule contains two parts: a selector and a declaration.</p>
+    <p class="highlight">Highlighted</p>
     <h2>Subheading 2</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est maxime aperiam blanditiis reprehenderit volumptatem quia quas nesciunt amet atque temporibus quod harum sequi voluptate consequatur tenetur preferendis, cum ad! Eos.</p>
+    <div>
+      This is the main point of the entire article. So, attribute
+      <span id="mainPoint">id="mainPoint".</span>
+    </div>
   </body>
 </html>
