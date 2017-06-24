@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Setting Font Size</title>
+    <style>
+      body {
+        font-size: 120%; /* 1.2 times of browsers default */
+      }
+    </style>
+  </head>
+  <body>
+    <div>Regular text</div>
+    <!--
+      use em to specify size relatively
+      eg 2em means 2 times whatever the size is right now.
+      the effect of both em and % is cumulative.
+      eg below
+    -->
+    <div style="font-size: 200%;">2em text (Another one to compare em to %)</div>
+    <div style="font-size: 2em;">2em text
+      <div style="font-size: 2em;">4em text
+        <div style="font-size: 0.5em">2em again!</div>
+      </div>
+    </div>
+  </body>
+</html>
