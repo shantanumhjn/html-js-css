@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    /*
+      Selecting elements (works with elements, classes, ids):
+      1) direct child
+        parent > child {}
+      2) anywhere inside parent
+        parent child {}
+      3) look up adjacent sibling selector (+)
+      4) look up general sibling selector (~)
+
+      for 3 & 4:
+        uncommon
+        sibling meaning, having same parent.
+        adjacent meaning, directly after
+          eg. a + b {} will match
+          <parent>
+            <a></a>
+            <b></b>
+          </parent>
+
+        general will match this also (a ~ b {}):
+          <parent>
+            <a></a>
+            <arbit></arbit>
+            <b></b>
+          </parent>
+    */
+
+    /* all li elements that are inside a section element. */
+    /* section > ul > li: also works*/
+    section li{
+      color: green;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Decendant Selector</h1>
+    <section>
+      Table of contents:
+      <ul>
+        <li>Article 1</li>
+        <li>Article 2</li>
+        <li>Article 3</li>
+      </ul>
+    </section>
+    <article>
+      Shopping List:
+      <ul>
+        <li>Cookies</li>
+        <li>Cake</li>
+        <li>Pie</li>
+      </ul>
+    </article>
+  </body>
+</html>
