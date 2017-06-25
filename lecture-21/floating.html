@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Floating Elements</title>
+    <style>
+      /* float takes the element out of the regular flow */
+      /* use clear to have the rest of the elemets follow the flow */
+      /* float dont have vertical margin collapse */
+      /* to resume normal document flow use clear */
+      div {
+        background-color: #00FFFF;
+      }
+      p {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #000000;
+      }
+      #p1 {
+        background-color: #A52A2A;
+        float: right;
+        margin-right: 10px;
+      }
+      #p2 {
+        background-color: #DEB887;
+        clear: right;
+      }
+      #p3 {
+        background-color: #5F9EA0;
+      }
+      #p4 {
+        background-color: #FF7F50;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Floating Elements</h1>
+    <div>
+      <p id="p1"></p>
+      <p id="p2"></p>
+      <p id="p3"></p>
+      <p id="p4"></p>
+      <section>
+        This is regular content continuing after the paragraph boxes.
+      </section>
+    </div>
+  </body>
+</html>

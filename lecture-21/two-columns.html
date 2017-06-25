@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Two Column Design</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      div {
+        /*background-color: #00ffff;*/
+      }
+      p {
+        width: 50%;
+        /*
+        having a border without setting box-sizing to border-box
+        will cause the actual size to be more than 50% hence we will not get the desired effect.
+         */
+        /*border: 1px solid #000000;*/
+        float: left;
+        padding: 10px;
+      }
+
+      #p1 {
+        /*background-color: #A52A2A;*/
+      }
+      #p2 {
+        /*background-color: #DEB887;*/
+      }
+      section {
+        clear: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Two Column Design</h1>
+    <div>
+      <p id="p1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et eros consectetur, molestie est id, iaculis tortor. Donec ullamcorper neque nisl, a euismod nisi tempus sit amet. Aenean tortor turpis, tincidunt vitae scelerisque quis, feugiat quis ex. Vestibulum aliquam luctus tristique. Phasellus nulla nulla, interdum sed metus ut, congue scelerisque massa.
+      </p>
+      <p id="p2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et eros consectetur, molestie est id, iaculis tortor. Donec ullamcorper neque nisl, a euismod nisi tempus sit amet. Aenean tortor turpis, tincidunt vitae scelerisque quis, feugiat quis ex. Vestibulum aliquam luctus tristique. Phasellus nulla nulla, interdum sed metus ut, congue scelerisque massa. Nullam iaculis porttitor nibh a vulputate. Nulla condimentum vitae mi non accumsan. Duis molestie massa at sagittis pretium.
+      </p>
+      <section>
+        This is regular content continuing after the paragraph boxes.
+      </section>
+    </div>
+  </body>
+</html>
