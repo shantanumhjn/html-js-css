@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Background</title>
+    <style>
+      #bg {
+        width: 500px;
+        height: 500px;
+        /*background-color: #0000ff;*/
+
+        /* image takes priority */
+        /*background-image: url("yaakov.png");*/
+
+        /* repeat options */
+        /*background-repeat: no-repeat;*/
+        /*background-repeat: repeat-x;*/
+        /*background-repeat: repeat-y;*/
+
+        /* horizontal and vertical pos */
+        /*background-position: right top;*/
+         /* if not specified, default is center */
+        /*background-position: bottom;*/
+
+        /* everything above can be specified using 1 prop */
+        /* will over write any other property background prop specified */
+        background: url("yaakov.png") no-repeat right center salmon;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The background Property</h1>
+    <div id="bg">Background properties are fun!</div>
+  </body>
+</html>
