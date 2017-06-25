@@ -11,7 +11,8 @@
   to apply something to everything use * selector
 */
 * {
-  box-sizing: border-box; /* or content box - default, dictates how the size properties are set ie height and widht, setting it to border box includes the border in the size
+  box-sizing: border-box;
+  /* or content box - default, dictates how the size properties are set ie height and widht, setting it to border box includes the border in the size
 
   New frameworks like bootstrap use border box */
   /* browser put a default margin around most tags, "user agent stylesheet". going to set it to 0.*/
@@ -30,7 +31,21 @@ body {
   padding: 10px 10px 10px 10px; /* clockwise: top right bottom left. this is same as padding: 10px;*/
   border: 5px solid black;
   margin: 40px;
-  width: 300px; /* fixed width, but only of the content, not the stuff around it */
+  width: 300px; /* fixed width, but only of the content, not the stuff around it, change this by setting box-sizing */
+
+  /* setting smaller size makes content spill out and overlap with subsequent content, get around it by using overflow property */
+
+  /* usually not preferred to have a scroll bar other than the browser scrollbar, but sometimes ok eg with T&C. */
+  height: 50px;
+  overflow: auto;
+  /*
+    overflow:
+      visible: defualt, spills
+      hidden: clips
+      auto: adds scroll bars if needed
+      scroll: force scroll bars
+  */
+
 }
 #content {
   background-color: #90EE90; /*green*/
@@ -38,7 +53,9 @@ body {
 
 h1 {
   /*
-    margins collapse
+    horizontal margins cumulate
+    vertical margins collapse
+
     in this eg. h1 has a margin 30 and box has a margin 40
     the final margin will be the greater on ie 40.
   */
@@ -54,9 +71,11 @@ h1 {
 <!-- inner elements usually eat up as much of the parents space as possible
 so padding the element with id box -->
 <div id="box">
-  <div id="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. </div>
+  <div id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et eros consectetur, molestie est id, iaculis tortor. Donec ullamcorper neque nisl, a euismod nisi tempus sit amet. Aenean tortor turpis, tincidunt vitae scelerisque quis, feugiat quis ex. Vestibulum aliquam luctus tristique. Phasellus nulla nulla, interdum sed metus ut, congue scelerisque massa. Nullam iaculis porttitor nibh a vulputate. Nulla condimentum vitae mi non accumsan. Duis molestie massa at sagittis pretium.</div>
 </div>
-
+<div>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et eros consectetur, molestie est id, iaculis tortor. Donec ullamcorper neque nisl, a euismod nisi tempus sit amet. Aenean tortor turpis, tincidunt vitae scelerisque quis, feugiat quis ex. Vestibulum aliquam luctus tristique. Phasellus nulla nulla, interdum sed metus ut, congue scelerisque massa. Nullam iaculis porttitor nibh a vulputate. Nulla condimentum vitae mi non accumsan. Duis molestie massa at sagittis pretium.
+</div>
 
 </body>
 </html>
