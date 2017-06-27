@@ -1,0 +1,99 @@
+/*
+structure of this page:
+  div class=container
+    div class=row
+      section floating left - each data point
+        div - some margin so that each data point is not touching each other
+          h1 - the heading - floating right
+          p - the description clear: right
+*/
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.main-heading {
+  font-size: 1.75em;
+  text-align: center;
+}
+section {
+  margin-bottom: 15px;
+}
+section > div {
+  margin: 0;
+  background-color: gray;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid black;
+}
+/* styling for the desc inside the boxes */
+section p {
+  clear: right;
+  padding: 15px;
+  margin: 0;
+  overflow: auto;
+  color: white;
+}
+
+/* title for each box */
+.section-heading {
+  float: right;
+  margin: 0;
+  border: 1px solid black;
+  overflow: auto;
+  font-size: 1.25em;
+}
+
+/* 3 repeating colours for each section heading */
+.row section:nth-of-type(3n+1) h1 {
+  background-color: salmon;
+}
+.row section:nth-of-type(3n+2) h1 {
+  background-color: cyan;
+}
+.row section:nth-of-type(3n) h1 {
+  background-color: #F0E68C;  /* khaki */
+}
+
+/* trying to mimic bootstrap layout with the container and row classes */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+/* media queries */
+/* desktop screen */
+@media (min-width: 992px) {
+  section {
+    float:left;
+    width: 33.33%
+  }
+  section:last-of-type:nth-of-type(3n+2), section:nth-last-of-type(2):nth-of-type(3n+1) {
+    width: 50%;
+  }
+  section:last-of-type:nth-of-type(3n+1) {
+    width: 100%
+  }
+}
+
+/* tablet screen */
+@media (min-width: 768px) and (max-width: 991px) {
+  section {
+    float: left;
+    width: 50%;
+  }
+  section:last-of-type:nth-of-type(odd) {
+    width: 100%;
+  }
+}
+/* phone screen */
+@media (max-width: 767px) {
+  /* default structure will take over */
+}
