@@ -127,4 +127,12 @@ body {
   .navbar-brand p img { /* star-k */
     height: 20px;
   }
+
+  #collapsable-nav a { /* collpased nav menu glyph */
+    font-size: 1.2em;
+  }
+  #collapsable-nav a span {
+    font-size: 1em; /* made the icons smaller */
+    margin-right: 5px; /* added space between the icon and text */
+  }
 }
