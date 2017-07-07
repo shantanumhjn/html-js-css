@@ -86,9 +86,19 @@ body {
 }
 /* end header */
 
+/* home page */
+.container .jumbotron {
+  box-shadow: 0 0 50px #3f0c1f;
+  border: 2px solid #3f0c1f;
+}
+/* end home page */
+
 /* large devices */
 @media (min-width: 1200px) {
-
+  .container .jumbotron {
+    background: url('../images/jumbotron_1200.jpg') no-repeat;
+    height: 675px;
+  }
 }
 
 /* medium devices */
@@ -101,11 +111,23 @@ body {
     margin: 5px 5px 5px 0;
   }
   /* end header */
+
+  /* home page */
+  .container .jumbotron {
+    background: url('../images/jumbotron_992.jpg') no-repeat;
+    height: 558px;
+  }
+  /* end home page */
 }
 
 /* small devices */
 @media (min-width: 768px) and (max-width: 991px) {
-
+  /* home page */
+  .container .jumbotron {
+    background: url('../images/jumbotron_768.jpg') no-repeat;
+    height: 432px;
+  }
+  /* end home page */
 }
 
 /* extra small devices */
@@ -134,5 +156,28 @@ body {
   #collapsable-nav a span {
     font-size: 1em; /* made the icons smaller */
     margin-right: 5px; /* added space between the icon and text */
+  }
+
+  #call-btn > a {
+    font-size: 1.5em;
+    display: block;
+    margin: 0 20px;
+    padding: 10px;
+    border: 2px solid #fff;
+    background-color: #f6b319;
+    color: #951c49;
+  }
+  #xs-deliver {
+    margin-top: 5px;
+    font-size: .7em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  /* End header */
+
+  /* home page */
+  .container .jumbotron {
+    margin-top: 30px;
+    padding: 0;
   }
 }
