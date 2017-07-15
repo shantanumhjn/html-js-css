@@ -308,4 +308,14 @@ body {
     width: 280px;
     margin: 0 auto 15px;
   }
+
+  /* copied from bootstrap col-xs-12*/
+  .col-xxs-12 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 100%;
+  }
 }
