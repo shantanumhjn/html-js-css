@@ -1,0 +1,35 @@
+.row > div > section {
+  background-color: #E6E6FA;
+  margin-bottom: 25px;
+  font-size: 1.5em;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+h3 {
+  margin-top: 5px;
+}
+
+.navbar-brand h1 { /* Restaurant name */
+  font-weight: bold;
+  font-size: 1.5em;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 1;
+  line-height: .75;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+
+#nav-list a {
+  text-align: center;
+  font-size: 1.4em;
+}
+
+#nav-list a:hover {
+  background: #e7e7e7;
+}
