@@ -33,3 +33,19 @@ if (x === y) {
 } else {
   console.log("Strict: x='4' is NOT equal to y=4");
 }
+
+// to check if something will be true or false
+// in chrome dev tools:
+// Boolean("") -> false
+
+// if statement (all false)
+if (false || null || undefined || "" || 0 || NaN) {
+  console.log("This line won't ever execute");
+} else {
+  console.log("All false");
+}
+
+// if statement (all true)
+if (true && "hello" && 1 && -1 && "false") {
+    console.log("All true");
+}
