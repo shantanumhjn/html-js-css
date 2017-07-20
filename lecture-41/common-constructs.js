@@ -22,7 +22,7 @@ if (x == y) {
   console.log("x=4 is equal to y=4");
 }
 x = "4";
-// auto type conversion
+// auto type coercion
 if (x == y) {
   console.log("x='4' is equal to y=4");
 }
@@ -49,3 +49,39 @@ if (false || null || undefined || "" || 0 || NaN) {
 if (true && "hello" && 1 && -1 && "false") {
     console.log("All true");
 }
+
+
+
+// best practice for {} style
+// Curly brace on the same or next line...
+// Is it just a style
+function a()
+{
+  return
+  {
+    name: "Yaakov"
+  };
+}
+
+function b() {
+  return {
+    name: "Yaakov"
+  };
+}
+
+console.log(a());
+ // returns undefined because because ';' is not mandatory
+ // the "return" statement returns nothing
+
+console.log(b());
+
+
+
+
+
+// for loop
+var sum = 0;
+for (var i = 0; i < 10; i++) {
+  sum += i;
+}
+console.log("sum of 0 through 9 is: " + sum);
